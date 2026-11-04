@@ -1,0 +1,48 @@
+{
+  "name": "dsh-cookie-janitor",
+  "version": "1.0.0",
+  "description": "Expires stale dsh-auth browser cookies before the Cookie request header reaches Node's 16 KiB limit (HTTP 431).",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cookie",
+    "http-431",
+    "plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/07-dot/dsh-cookie-janitor.git"
+  },
+  "homepage": "https://github.com/07-dot/dsh-cookie-janitor#readme",
+  "bugs": {
+    "url": "https://github.com/07-dot/dsh-cookie-janitor/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.1"
+  },
+  "scripts": {
+    "test": "node test/janitor.test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

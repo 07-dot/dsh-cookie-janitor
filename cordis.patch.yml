@@ -1,0 +1,16 @@
+# One Host row: watches the Web server's request headers and expires stale
+# `dsh-auth-*` cookies before they can reach Node's 16 KiB header limit (HTTP 431).
+#
+# Tunables (omit for the defaults):
+#   maxCookies       8      prune once the browser sends more than this many dsh-auth cookies
+#   maxHeaderBytes   4096   prune once the whole Cookie header exceeds this many bytes
+#   retain           2      cookies kept after a prune, including the current authority's own
+#   dryRun           false  log what would be pruned without sending deletions
+- insert:
+    - id: cookie-janitor
+      name: dsh-cookie-janitor
+      config:
+        maxCookies: 8
+        maxHeaderBytes: 4096
+        retain: 2
+        dryRun: false

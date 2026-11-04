@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "Cookie Janitor",
+    "description": "Expires stale dsh-auth sign-in cookies from the browser jar once the Cookie request header grows past 4 KiB, so an accumulation of per-port cookies can never reach Node's 16 KiB header limit (HTTP 431)."
+  },
+  "clear": {
+    "title": "Cookie Janitor",
+    "cleared": "Expired {count} sign-in cookie(s).",
+    "nothing": "This request carried no sign-in cookie.",
+    "stats": "Largest Cookie header seen: {bytes} B. Most sign-in cookies seen: {count}. Cookies pruned: {pruned}.",
+    "reopen": "Reopen the URL printed by DSH to sign in again."
+  }
+}

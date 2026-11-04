@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "登录 Cookie 清理器",
+    "description": "当 Cookie 请求头超过 4 KiB 时，自动清除浏览器里失效的 dsh-auth 登录 Cookie，避免按端口累积的旧 Cookie 撑到 Node 的 16 KiB 请求头上限（HTTP 431）。"
+  },
+  "clear": {
+    "title": "登录 Cookie 清理器",
+    "cleared": "已清除 {count} 条登录 Cookie。",
+    "nothing": "本次请求没有携带登录 Cookie。",
+    "stats": "观测到的最大 Cookie 请求头：{bytes} B；最多登录 Cookie 数：{count}；已清理：{pruned}。",
+    "reopen": "重新打开 DSH 打印出的地址即可重新登录。"
+  }
+}
